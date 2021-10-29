@@ -4,7 +4,10 @@
   "description": "Logistics Trip Sheet",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "server": "nodemon server.js --ignore 'Frontend/' ",
+    "client":"npm run serve --prefix Frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "start": "node server.js"
   },
   "author": "srl",
   "license": "ISC",
@@ -16,6 +19,7 @@
     "mongoose": "^6.0.11"
   },
   "devDependencies": {
+    "concurrently": "^6.3.0",
     "nodemon": "^2.0.14"
   }
 }
