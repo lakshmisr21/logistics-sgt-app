@@ -4,9 +4,7 @@
   "description": "Logistics Trip Sheet",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon server.js --ignore 'Frontend'",
-    "Frontend": "npm run serve --prefix Frontend",
-    "start": "concurrently \"npm run server\" \"npm run Frontend\""
+    "start": "nodemon server.js"
   },
   "author": "srl",
   "license": "ISC",

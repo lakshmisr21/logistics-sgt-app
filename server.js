@@ -25,12 +25,22 @@ app.use('/post',postRouter)
 //If Production 
 //Step 1 from Frontend: npm run build 
 //Step 2 copy and paste dist folder from Frontend to root directory of where server.js exits
+//Step 3 to add below script
 if(process.env.NODE_ENV === "production"){
   app.use(express.static(__dirname + "/dist"))
   app.get("*",(req,res)=>{
     res.sendFile(__dirname + "/dist/index.html")
   })
 }
+//Step 4: git init
+//Step 5 : git .add
+//Step 6: git commit 'First Commit'
+//Step 7: heroku cli to be installed then type: heroku login
+//Step 8: heroku create Logitstics_SGT
+//Step 9: heroku git:<name>
+//Step 10:git push heroku HEAD:master
+
+
 
 
   const mongoose = require('mongoose')
